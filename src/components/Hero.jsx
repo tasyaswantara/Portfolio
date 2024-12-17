@@ -29,8 +29,9 @@ const Hero = () => {
           </span>
         </h2>
         <p className="text-gray-600 mt-4 text-xl pr-[40%]">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
+        Informatics Engineering student at Brawijaya University. Have an
+interest in the eld of web development, especially frontend
+development
         </p>
         {/* Social Icons */}
         <div className="flex space-x-6 mt-6">

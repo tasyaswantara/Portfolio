@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full " id="contact">
       {/* Contact Form */}
-      <div className="py-16 px-8 w-full max-w-4xl">
+      <div className="pb-16 px-8 w-full max-w-4xl">
         <h2 className="text-4xl font-bold text-center mb-20">
           <span className="text-pink-500">Contact</span> Me
         </h2>
