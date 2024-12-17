@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Left Section */}
       <div className="w-full md:w-1/2 flex flex-col gap-4 animate-slide-in">
         <h3 className="text-2xl font-bold text-gray-800">Hello It’s Me</h3>
-        <h1 className="text-7xl font-bold mt-2 text-gray-900">
+        <h1 className="text-[68px] font-bold mt-2 text-gray-900">
           Natasya Desinta S
         </h1>
         <h2 className="text-3xl font-bold mt-3 text-gray-800">
