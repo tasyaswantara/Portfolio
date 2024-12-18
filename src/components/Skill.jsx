@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Skill = () => {
   return (
-    <div className="w-1/2 mx-auto">
+    <div className=" w-[90%] md:w-1/2 mx-auto">
       <Marquee autoFill gradient >
           <img src="https://img.icons8.com/ios/50/html-5.png" className="h-16 w-16 mx-4" alt="HTML5" />
           <img src="https://img.icons8.com/ios/50/css3.png" className="h-16 w-16 mx-4" alt="CSS3" />

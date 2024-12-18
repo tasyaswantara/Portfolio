@@ -17,7 +17,7 @@ const portfolioItems = [
     demo: "https://hello.clips.id/",
     image: Clips,
     intro: "Website link shortener yang memiliki fitur unggulan:",
-    periode: "Hingga saat ini",
+    periode: "July 2024 - Present",
     peran: "Frontend Developer",
     fitur: [
       "Pembuatan QR code secara otomatis.",
@@ -42,7 +42,7 @@ const portfolioItems = [
       "Aplikasi booking jasa nanny dengan integrasi Google Calendar.",
     image: Find,
     intro: "Aplikasi Android mobile untuk membooking jasa nanny:",
-    periode: "Hingga saat ini",
+    periode: "Nov 2024",
     peran: "Fullstack Developer",
     fitur: [
       "Merawat bayi, lansia, rumah, dan hewan peliharaan.",
@@ -65,7 +65,7 @@ const portfolioItems = [
     description: "Web rekomendasi destinasi dengan peta interaktif.",
     image: Schoolin,
     intro: "Website untuk traveler yang menampilkan rekomendasi destinasi:",
-    periode: "Hingga saat ini",
+    periode: "Nov 2022",
     peran: "Frontend Developer",
     fitur: [
       "Peta interaktif menggunakan Leaflet.",
@@ -86,7 +86,7 @@ const portfolioItems = [
     code: "https://github.com/tasyaswantara/cultour1.git",
     image: Cultour,
     intro: "Website edukasi budaya daerah Indonesia:",
-    periode: "Hingga saat ini",
+    periode: "Feb 2022 - Mar 2022",
     peran: "Frontend Developer",
     fitur: [
       "Pembelajaran bertahap dari pengenalan daerah, video edukasi, hingga kuis akhir.",
@@ -107,7 +107,7 @@ const portfolioItems = [
     description: "Aplikasi Android untuk mengukur parameter kesehatan.",
     image: Eduhealth,
     intro: "Aplikasi Android yang mengukur parameter kesehatan seperti:",
-    periode: "Hingga saat ini",
+    periode: "Jun 2024 - Jul 2024",
     peran: "Frontend Developer",
     fitur: [
       "BMI (Body Mass Index).",
@@ -193,16 +193,16 @@ const Portfolio = () => {
         <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm  z-[999] flex justify-center  overflow-y-auto scrollbar-hidden custom-scrollbar">
           <div className="  bg-white w-full md:w-1/2 h-max pb-16   rounded-t-full mt-[15vh] transform transition-all duration-500 animate-slide-up   shadow-2xl shadow-pink-500 ">
             <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900  bg-pink-200 w-14 h-14  rounded-full  text-2xl"
+              className="absolute -top-5 md:top-4 right-4 text-gray-600 hover:text-gray-900  bg-pink-200 w-14 h-14  rounded-full  text-2xl"
               onClick={closePopup}
             >
               &times;
             </button>
-            <div className=" w-full h-full pt-[10%] px-20">
+            <div className=" w-full h-full pt-[10%] md:px-20 px-8">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
-                className="w-full h-96   object-cover rounded-t-full mb-4 shadow-md "
+                className="w-full h-96   object-cover object-top rounded-t-full mb-4 shadow-md "
               />
               <div className=" w-full flex items-center gap-4 mt-10">
                 <h2 className="text-4xl font-bold mb-4 text-pink-600 w-auto">
@@ -214,7 +214,7 @@ const Portfolio = () => {
                 {selectedItem.description}
               </p>
               <p className=" text-xl font-medium">
-                Periode:{" "}
+                Period:{" "}
                 <span className=" text-pink-600"> {selectedItem.periode} </span>
               </p>
               <p className=" text-xl font-medium my-4">
