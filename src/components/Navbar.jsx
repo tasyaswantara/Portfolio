@@ -1,18 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Fungsi untuk mendeteksi scroll dan mengatur visibilitas Navbar
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      // Scroll ke bawah, sembunyikan navbar
+      setIsVisible(false);
+    } else {
+      // Scroll ke atas atau berhenti, tampilkan navbar
+      setIsVisible(true);
+    }
+    setLastScrollY(window.scrollY); // Simpan posisi scroll terakhir
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]); // Tambahkan dependency lastScrollY
 
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setMobileMenuOpen(false); // Close the menu after navigating
+    setMobileMenuOpen(false); // Tutup menu setelah navigasi
   };
 
   return (
-    <nav className="w-full min-h-16 sticky top-0 z-[999] bg-white shadow-md">
+    <nav
+      className={`w-full min-h-16 sticky top-0 z-[999] bg-white shadow-md transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex justify-between items-center px-6 md:px-24 py-4">
         {/* Logo */}
         <h2 className="text-pink-500 text-lg md:text-xl font-bold">Portfolio</h2>
